@@ -60,7 +60,7 @@ your@pc:~$ bundle exec rake db:create && bundle exec rake db:migrate && bundle e
 ```
 
 ### API request.
-Postman File could be  found on public/miniflix_postman.json
+Postman File could be  found on public/MINIFLIX.postman_collection.json
 
 
 All API REQUEST are using json. 
