@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  # If you using docker the host should be "db"
+  host: <%= ENV['DATABASE_HOST'] %>
+  port: 5432
+
+development:
+  <<: *default
+  database: miniflix_development
+
+test:
+  <<: *default
+  database: miniflix_test
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
